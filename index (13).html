@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Mundo das Tintas — Altamira</title>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fffdf8;--bg2:#f6efe3;--ink:#1b1b24;--mute:#66667a;--acc:#ff5a36;--acc2:#2d7dff;--line:#eadfcf;--card:#fff;--dk:#1b1b24;--on:#fff;--r:22px;--br:14px;--hf:'Rubik',system-ui,sans-serif;--bf:'Rubik',system-ui,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root{--bg:color-mix(in srgb,var(--dk) 94%,var(--acc));--bg2:color-mix(in srgb,var(--dk) 86%,var(--acc));--ink:#f3f1ec;--mute:color-mix(in srgb,#fff 58%,var(--dk));--line:color-mix(in srgb,var(--dk) 76%,var(--acc));--card:color-mix(in srgb,var(--dk) 90%,var(--acc))}}
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;scroll-padding-top:70px;overflow-anchor:none}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 var(--bf);padding-bottom:76px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,.hf{font-family:var(--hf);text-transform:none;letter-spacing:-.03em;font-weight:800;line-height:1.04}
+.w{max-width:1100px;margin:0 auto;padding:0 22px}
+.in{position:fixed;inset:0;z-index:200;pointer-events:none;display:grid;place-items:center;animation:gone 0s 3.2s forwards}
+.in>b{grid-area:1/1;z-index:2;text-align:center;color:#fff;font:400 clamp(34px,11vw,92px)/1.05 var(--hf);text-transform:none;letter-spacing:-.03em;animation:fo .5s 1.1s forwards;padding:0 14px}
+.in .bars{grid-area:1/1;position:absolute;inset:0;display:flex}
+@keyframes gone{to{visibility:hidden}}@keyframes fo{to{opacity:0}}@keyframes ofade{to{opacity:0}}
+@keyframes fi{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@keyframes mq{to{transform:translateX(-50%)}}@keyframes bob{50%{transform:translateY(-10px)}}
+@keyframes bl{to{transform:translateY(-101%)}}@keyframes sl{to{transform:translateX(calc(var(--d)*101%))}}
+@keyframes cc{from{clip-path:circle(150% at 50% 50%)}to{clip-path:circle(0 at 50% 50%)}}
+@keyframes dash{to{stroke-dashoffset:0}}@keyframes fc{to{filter:blur(0)}}
+@keyframes bo{0%{transform:translateY(-140px);opacity:0}45%{transform:none;opacity:1}62%{transform:translateY(-26px)}78%{transform:none}90%{transform:translateY(-8px)}100%{transform:none}}
+@keyframes zm{0%{transform:scale(.7);opacity:0}35%{opacity:1}100%{transform:scale(1.6);opacity:0}}
+@keyframes ty{to{width:var(--w)}}@keyframes dl{to{transform:translateX(-101%)}}@keyframes dr{to{transform:translateX(101%)}}
+@keyframes wp{to{clip-path:inset(0 0 0 100%)}}@keyframes px{to{opacity:0}}@keyframes eq{50%{transform:scaleY(.25)}}
+.in-w .bars i{position:absolute;inset:0;animation:wp .8s cubic-bezier(.7,0,.2,1) forwards}
+.prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:90;background:linear-gradient(90deg,var(--acc),var(--acc2))}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header .w{display:flex;justify-content:space-between;align-items:center;height:62px}
+.logo{font:800 20px var(--hf);text-transform:none;letter-spacing:-.03em;font-weight:800}.logo span{color:var(--acc)}
+nav{display:none;gap:24px;font-size:14px;font-weight:500;color:var(--mute)}nav a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,var(--acc2),var(--acc));color:var(--on);padding:15px 26px;border-radius:var(--br);font:700 15px var(--bf);border:0;cursor:pointer;transition:transform .2s,filter .3s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}.btn.wa{background:#25d366;color:#062b13}.btn.o{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}.btn.o:hover{background:var(--ink);color:var(--bg)}
+header .btn{padding:10px 16px;font-size:14px}
+.tag{display:inline-block;font:700 12px var(--bf);letter-spacing:.16em;text-transform:uppercase;color:var(--acc);border:1px solid color-mix(in srgb,var(--acc) 50%,transparent);padding:6px 12px;border-radius:99px}
+h1{font-size:clamp(40px,11vw,88px);margin:18px 0 18px}h1 em{font-style:normal;color:var(--acc)}
+h2{font-size:clamp(30px,7vw,54px);margin:14px 0 12px}h2 em{font-style:normal;color:var(--acc)}
+.lead{color:var(--mute);font-size:18px;max-width:480px}.sub{color:var(--mute);max-width:540px;margin-bottom:30px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.hero{padding:36px 0 48px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 90% 0,color-mix(in srgb,var(--acc) 22%,transparent),transparent 55%),radial-gradient(ellipse at 0 100%,color-mix(in srgb,var(--acc2) 16%,transparent),transparent 55%)}
+.hero .w{display:grid;gap:30px}
+.hero .tag,.hero h1,.hero .lead,.hero .cta,.hero .stage{animation:up 1s both}
+.hero .tag{animation-delay:2.1s}.hero h1{animation-delay:2.2s}.hero .lead{animation-delay:2.35s}.hero .cta{animation-delay:2.5s}.hero .stage{animation-delay:2.3s}
+.hl-center .hero .ht{text-align:center;margin:0 auto}.hl-center .hero .lead{margin:0 auto}.hl-center .hero .cta{justify-content:center}
+.stage{position:relative;padding:22px 16px 12px;background:var(--card);border-radius:var(--r);border:1px solid var(--line);display:grid;place-items:center}
+.stage svg{display:block;width:100%;max-width:400px;height:auto}.hero .stage svg{animation:bob 6s ease-in-out infinite}
+.stage small{margin-top:8px;font-size:12px;color:var(--mute);text-align:center}
+.c-neo .stage,.c-neo .card,.c-neo .panel{border:2px solid var(--ink);box-shadow:5px 5px 0 var(--acc)}
+.c-glass .stage,.c-glass .card,.c-glass .panel{background:color-mix(in srgb,var(--card) 72%,transparent);backdrop-filter:blur(10px);border:1px solid color-mix(in srgb,var(--acc) 30%,var(--line))}
+.mq{overflow:hidden;white-space:nowrap;background:var(--dk);padding:15px 0}.mq div{display:inline-block;animation:mq 30s linear infinite;font:400 24px var(--hf);text-transform:none;color:#fff;letter-spacing:-.03em}.mq span{margin:0 22px}.mq em{font-style:normal;color:var(--acc2)}
+section{padding:66px 0}.alt{background:var(--bg2)}
+.cards{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;transition:transform .3s,border-color .3s}.card:hover{transform:translateY(-5px);border-color:var(--acc)}
+.card .n{font:400 40px var(--hf);color:var(--acc);display:block;margin-bottom:10px}.card h3{font-size:26px;margin-bottom:6px}.card p{color:var(--mute);font-size:15px}
+.pl{display:grid;gap:18px}.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px}.panel+.panel{margin-top:12px}
+.panel h3{font-size:19px;margin-bottom:12px}
+.sg{display:flex;gap:8px;flex-wrap:wrap}.sg button{font:600 14px var(--bf);padding:10px 16px;border-radius:var(--br);border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer;transition:.2s}.sg button.on{background:var(--acc);color:var(--on);border-color:var(--acc)}
+.sw{display:flex;gap:11px;flex-wrap:wrap}.sw button{width:44px;height:44px;border-radius:50%;border:3px solid var(--card);box-shadow:0 0 0 1px var(--line);cursor:pointer;transition:.25s}.sw button.on{box-shadow:0 0 0 2.5px var(--acc);transform:scale(1.1)}
+input[type=text]{width:100%;padding:14px;border-radius:calc(var(--r)/2);border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit}
+input[type=range]{width:100%;accent-color:var(--acc);height:34px}
+.sum{white-space:pre-line;font-size:14px;color:var(--mute);background:var(--bg2);border-radius:calc(var(--r)/2);padding:14px;margin:12px 0}
+.fn{font-size:13px;color:var(--mute);margin-top:10px}
+.st{display:grid;grid-template-columns:62px 1fr;gap:14px;padding:20px 0;border-bottom:1px solid var(--line)}.st b{font:400 44px/1 var(--hf);color:var(--acc)}.st h3{font-size:25px;margin-bottom:4px}.st p{color:var(--mute);font-size:15px}
+.fq{border-bottom:1px solid var(--line)}.fq button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;background:none;border:0;color:var(--ink);font:600 16px var(--bf);text-align:left;cursor:pointer;outline:none;-webkit-appearance:none;appearance:none}
+.pm{position:relative;width:18px;height:18px;flex:none;transition:transform .45s cubic-bezier(.32,.72,0,1)}.pm::before,.pm::after{content:"";position:absolute;left:0;top:8px;width:18px;height:2.5px;background:var(--acc);transition:transform .45s cubic-bezier(.32,.72,0,1)}.pm::after{transform:rotate(90deg)}
+.fq.open .pm{transform:rotate(180deg)}.fq.open .pm::after{transform:rotate(0)}
+.fa{height:0;overflow:hidden;transition:height .55s cubic-bezier(.32,.72,0,1)}.fa p{color:var(--mute);font-size:15px;padding-bottom:20px;opacity:0;transform:translateY(-6px);transition:opacity .3s,transform .55s cubic-bezier(.32,.72,0,1)}.fq.open .fa p{opacity:1;transform:none;transition-delay:.1s}
+.fin{background:radial-gradient(circle at 88% 0,color-mix(in srgb,var(--acc) 45%,transparent),transparent 55%),var(--dk);color:#f3f1ec;border-radius:var(--r);padding:44px 26px}.fin h2{color:#fff}.fin h2 em{color:var(--acc2)}.fin .sub{color:#b9b6c9}.fin .btn.o{color:#fff;border-color:#fff}.fin .btn.o:hover{background:#fff;color:#111}.fin .tag{color:#fff;border-color:rgba(255,255,255,.4)}
+.rows{max-width:540px;margin-top:28px}.row{display:flex;justify-content:space-between;gap:14px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.16);font-size:15px}.row span{color:#b9b6c9}.row b{font-weight:600;text-align:right}
+footer{text-align:center;color:var(--mute);font-size:13px;padding:26px 22px 40px}
+.bar2{position:fixed;left:0;right:0;bottom:0;z-index:45;display:flex;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(14px);border-top:1px solid var(--line)}.bar2 a{flex:1;padding:13px;font-size:14px}
+.rv{opacity:0;transform:translateY(26px);transition:.75s}.rv.in2{opacity:1;transform:none}
+
+@media(min-width:820px){nav{display:flex}.hero .w{grid-template-columns:1.1fr 1fr;align-items:center}.hl-center .hero .w{grid-template-columns:1fr}.hl-center .stage{max-width:560px;margin:0 auto;width:100%}.rev .hero .ht{order:2}.pl{grid-template-columns:1fr 1fr}.bar2{display:none}body{padding-bottom:0}.fin{padding:66px}}
+@media(prefers-reduced-motion:reduce){.in{display:none}.hero *,.mq div{animation:none!important}.rv{opacity:1;transform:none;transition:none}.fa,.fa p,.pm,.pm::before,.pm::after{transition:none}}
+</style></head>
+<body class="c-out hl-center">
+<div class="in in-w"><div class="bars"><i style="background:var(--dk);z-index:3;animation-delay:1.10s"></i><i style="background:var(--acc2);z-index:2;animation-delay:1.25s"></i><i style="background:var(--acc);z-index:1;animation-delay:1.40s"></i></div><b>MUNDO DAS TINTAS</b></div>
+<div class="prog" id="pg"></div>
+<header><div class="w"><a class="logo" href="#top">Mundo das <span>Tintas</span></a><nav><a href="#sobre">Produtos</a><a href="#interativo">Teste de cores</a><a href="#faq">Dúvidas</a><a href="#contato">Contato</a></nav><a class="btn wa" href="https://wa.me/5593991555656">WhatsApp</a></div></header>
+<main id="top">
+<div class="hero"><div class="w"><div class="ht"><span class="tag">Altamira · Tintas e acessórios</span><h1>Dê <em>cor</em> ao seu lugar</h1><p class="lead">Tintas, vernizes, solventes e tudo para pintura em Altamira. Escolha a cor e fale com a gente.</p><div class="cta"><a class="btn wa" href="https://wa.me/5593991555656">Chamar no WhatsApp</a><a class="btn o" href="#interativo">Testar cores</a></div></div><div class="stage" id="hs"><svg viewBox="0 0 300 200"><rect x="40" y="26" width="176" height="46" rx="10" fill="#2d7dff"/><path d="M216 49H258V120" fill="none" stroke="#555" stroke-width="8"/><rect x="104" y="112" width="74" height="70" rx="8" fill="#ff5a36"/><rect x="108" y="100" width="66" height="16" rx="6" fill="#ffb199"/></svg><small>Prévia de conceito · fotos e produtos reais entram aqui</small></div></div></div>
+<div class="mq" aria-hidden="true"><div id="mq"></div></div>
+<section id="sobre"><div class="w rv"><span class="tag">Produtos</span><h2>Tudo para <em>pintar</em></h2><p class="sub">Do acabamento à ferramenta, tudo num só lugar.</p><div class="cards"><div class="card"><span class="n">01</span><h3>Tintas</h3><p>Tintas para dar nova vida a paredes e superfícies.</p></div><div class="card"><span class="n">02</span><h3>Vernizes e solventes</h3><p>Para proteger, diluir e finalizar o trabalho.</p></div><div class="card"><span class="n">03</span><h3>Material de pintura</h3><p>Acessórios para pintar com mais facilidade.</p></div></div></div></section>
+<section class="alt" id="interativo"><div class="w rv"><span class="tag">Teste de cores</span><h2>Teste a <em>cor</em></h2><p class="sub">Escolha uma cor e onde pintar e veja a prévia. As cores na tela são aproximadas, e a loja ajuda a achar a ideal.</p>
+<div class="pl"><div class="stage" id="ps"><div id="psv"></div><small id="pn"></small></div><div id="pc"><div class="panel"><h3>Cor</h3><div class="sw" id="g-c"><button data-v="#f2f1ea" data-n="Branco gelo" style="background:#f2f1ea" aria-label="Branco gelo" class="on"></button><button data-v="#e3d2b4" data-n="Areia" style="background:#e3d2b4" aria-label="Areia"></button><button data-v="#9db39a" data-n="Verde sálvia" style="background:#9db39a" aria-label="Verde sálvia"></button><button data-v="#8fc3e8" data-n="Azul céu" style="background:#8fc3e8" aria-label="Azul céu"></button><button data-v="#c96a4a" data-n="Terracota" style="background:#c96a4a" aria-label="Terracota"></button><button data-v="#f1c6c6" data-n="Rosa chá" style="background:#f1c6c6" aria-label="Rosa chá"></button><button data-v="#f6c744" data-n="Amarelo sol" style="background:#f6c744" aria-label="Amarelo sol"></button><button data-v="#4a4d55" data-n="Cinza grafite" style="background:#4a4d55" aria-label="Cinza grafite"></button><button data-v="#1f5c6b" data-n="Azul petróleo" style="background:#1f5c6b" aria-label="Azul petróleo"></button><button data-v="#b9a4e0" data-n="Lilás" style="background:#b9a4e0" aria-label="Lilás"></button></div></div><div class="panel"><h3>Onde pintar?</h3><div class="sg" id="g-t"><button data-v="Parede" class="on">Parede</button><button data-v="Porta">Porta</button><button data-v="Móvel">Móvel</button></div></div><div class="panel"><p class="fn" style="margin:0">As cores na tela são aproximadas.</p></div><div class="panel"><h3>Seu pedido</h3><div class="sum" id="sm"></div><a class="btn wa" id="wl" href="#" target="_blank" rel="noopener" style="width:100%">Pedir esta cor no WhatsApp</a></div></div></div></div></section>
+<section><div class="w rv"><span class="tag">Como funciona</span><h2>Da cor ao <em>acabamento</em></h2><p class="sub">&nbsp;</p><div class="st"><b>1</b><div><h3>Escolha</h3><p>Teste cores e veja como ficam no ambiente.</p></div></div><div class="st"><b>2</b><div><h3>Fale com a gente</h3><p>Envie a cor escolhida pelo WhatsApp.</p></div></div><div class="st"><b>3</b><div><h3>Pinte</h3><p>Retire na loja o que precisa para o trabalho.</p></div></div></div></section>
+<section class="alt" id="faq"><div class="w rv"><span class="tag">Dúvidas</span><h2>Perguntas <em>frequentes</em></h2><p class="sub">&nbsp;</p><div class="fq"><button type="button" aria-expanded="false">O que o Mundo das Tintas vende?<span class="pm"></span></button><div class="fa"><div><p>Tintas, vernizes, solventes e acessórios para pintura.</p></div></div></div><div class="fq"><button type="button" aria-expanded="false">Onde fica?<span class="pm"></span></button><div class="fa"><div><p>Em Altamira. Chame no WhatsApp para confirmar endereço e horário.</p></div></div></div><div class="fq"><button type="button" aria-expanded="false">Como peço uma cor?<span class="pm"></span></button><div class="fa"><div><p>Escolha aqui e envie pelo WhatsApp, ou ligue para (93) 99155-5656.</p></div></div></div></div></section>
+<section id="contato"><div class="w rv"><div class="fin"><span class="tag">Contato</span><h2>Pronto para <em>pintar?</em></h2><p class="sub">Chame o Mundo das Tintas no WhatsApp.</p><div class="cta"><a class="btn wa" href="https://wa.me/5593991555656">WhatsApp</a><a class="btn o" href="tel:+5593991555656">Ligar</a></div><div class="rows"><div class="row"><span>WhatsApp</span><b>(93) 99155-5656</b></div><div class="row"><span>Cidade</span><b>Altamira</b></div><div class="row"><span>Loja</span><b>Tintas, vernizes, solventes e acessórios</b></div></div></div></div></section>
+</main>
+<footer>© Mundo das Tintas. Demonstração de conceito, não é o site oficial.</footer>
+<div class="bar2"><a class="btn wa" href="https://wa.me/5593991555656">WhatsApp</a><a class="btn o" href="#interativo">Testar cores</a></div>
+<script>
+var $=function(i){return document.getElementById(i)},PH="5593991555656",WA=true;
+function send(t){var a=$("wl");if(WA){a.href="https://wa.me/"+PH+"?text="+encodeURIComponent(t)}else{a.href="#";a.onclick=function(e){e.preventDefault();(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){a.textContent="Copiado! Agora ligue"},function(){$("sm").textContent=t})}}}
+function chips(id,multi,cb){var e=$(id);e.onclick=function(ev){var b=ev.target.closest("button");if(!b)return;if(multi)b.classList.toggle("on");else[].forEach.call(e.children,function(x){x.classList.toggle("on",x===b)});cb()}}
+function sel(id){return [].filter.call($(id).children,function(x){return x.classList.contains("on")}).map(function(x){return x.dataset.v||x.textContent})}
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}
+var m="";["Tintas", "Vernizes", "Solventes", "Pintura", "Altamira"].concat(["Tintas", "Vernizes", "Solventes", "Pintura", "Altamira"]).forEach(function(t){m+="<span>"+t+"</span><em>●</em>"});$("mq").innerHTML=m;
+(function(){var p=$("px");if(!p)return;for(var i=0;i<112;i++){var c=document.createElement("i");c.style.setProperty("--d",(1.2+Math.random()*.7)+"s");p.insertBefore(c,p.firstChild)}})();
+
+function ren(){var b=$("g-c").querySelector(".on"),c=b.dataset.v,n=b.dataset.n,t=sel("g-t")[0],w=t==="Parede"?c:"#efe9de",d=t==="Porta"?c:"#8a6a4a",f=t==="Móvel"?c:"#a98760";$("psv").innerHTML='<svg viewBox="0 0 320 220"><rect width="320" height="170" fill="'+w+'" style="transition:fill .4s"/><rect y="170" width="320" height="50" fill="#caa57a"/><rect x="26" y="26" width="86" height="76" fill="#cfe7f5" stroke="#fff" stroke-width="6"/><rect x="226" y="40" width="64" height="130" rx="3" fill="'+d+'" style="transition:fill .4s"/><circle cx="238" cy="108" r="4" fill="#d9b15a"/><rect x="40" y="128" width="150" height="46" rx="6" fill="'+f+'" style="transition:fill .4s"/><rect x="40" y="170" width="8" height="12" fill="#5a4630"/><rect x="182" y="170" width="8" height="12" fill="#5a4630"/></svg>';$("pn").textContent=n+" · "+t;$("sm").textContent="Cor: "+n+"\nOnde: "+t;send("Olá, Mundo das Tintas! Quero uma tinta na cor "+n.toLowerCase()+" para "+t.toLowerCase()+". O que vocês têm parecido?")}
+chips("g-t",0,ren);$("g-c").onclick=function(e){var b=e.target.closest("button");if(!b)return;[].forEach.call(this.children,function(x){x.classList.toggle("on",x===b)});ren()};ren();
+function fh(f){var a=f.querySelector(".fa");a.style.height=f.classList.contains("open")?a.firstElementChild.offsetHeight+"px":"0px"}
+document.querySelectorAll(".fq button").forEach(function(b){b.addEventListener("mousedown",function(e){e.preventDefault()});b.addEventListener("click",function(){var f=b.parentNode,o=f.classList.toggle("open");b.setAttribute("aria-expanded",o);fh(f)})});
+addEventListener("resize",function(){document.querySelectorAll(".fq.open").forEach(fh)});
+addEventListener("scroll",function(){var h=document.documentElement;$("pg").style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight||1)*100)+"%"},{passive:true});
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add("in2")})},{threshold:.1});
+document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
+</script>
+</body></html>
